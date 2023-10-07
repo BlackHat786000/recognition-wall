@@ -1,0 +1,125 @@
+<div class="content-grid">
+    <div class="card points" style="width: 18rem; margin-left: 1.5rem; max-height: 140px;">
+        <div class="card-header" style="font-weight: bold; color: teal; font-size: 20px;">
+            Point Summary
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item custom-list-item">
+                <i class="bi bi-cash-coin"></i>
+                <span class="list-item-text text-body-secondary">Giveable</span>
+                <span class="list-item-value">75</span>
+            </li>
+            <li class="list-group-item custom-list-item">
+                <i class="bi bi-cart3"></i>
+                <span class="list-item-text text-body-secondary">Reedemable</span>
+                <span class="list-item-value">50</span>
+            </li>
+        </ul>
+    </div>
+    <div class="form-group shadow-textarea recognize">
+        <div class="recipient">
+            <button type="button" class="btn" style="background-color: whitesmoke; border-radius: 20px; color: teal;"><i
+                    class="bi bi-at" style="font-size: 1.1rem;">Recipient</i></button>
+        </div>
+        <div class="amount">
+            <button type="button" class="btn" style="background-color: whitesmoke; border-radius: 20px; color: teal;"><i
+                    class="bi bi-plus-lg" style="font-size: 1.1rem;">Amount</i></button>
+        </div>
+        <div class="hashtag">
+            <button type="button" class="btn" style="background-color: whitesmoke; border-radius: 20px; color: teal;"><i
+                    class="bi bi-hash" style="font-size: 1.1rem;">Hashtag</i></button>
+        </div>
+        <div class="btn-group button-group">
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-people"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-emoji-smile"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-filetype-gif"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-image"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-link"></i>
+            </button>
+            <button type="button" class="btn btn-outline-secondary">
+                <i class="bi bi-tag"></i>
+            </button>
+        </div>
+        <button type="button" class="btn btn-primary recognition-button">Give recognition</button>
+        <textarea class="form-control z-depth-1" style="border-radius: 2rem;" rows="6" placeholder="">
+        </textarea>
+
+        <div style="max-height: 100%; overflow-y: auto;">
+            <div *ngFor="let post of posts" class="testimonial flow bg-secondary-400 text-neutral-100"
+                style="background-color: white; border-radius: 3rem; margin-top: 1rem;">
+                <div class="flex">
+                    <div>
+                        <img [src]=post.image alt="Jonathan Walters">
+                    </div>
+                    <div>
+                        <h2 class="name" style="color: gray; font-weight: bold;">{{ post.name }}</h2>
+                        <p class="position" style="color: black;">{{ post.position }}</p>
+                    </div>
+                </div>
+                <p style="color: gray; font-weight: bold; font-style: italic;">
+                    {{ post.title }}
+                </p>
+                <p style="color: black;">
+                    {{ post.message }}
+                </p>
+
+                <div class="buttons-container">
+                    <button type="button" class="btn"
+                        style="background-color: whitesmoke; border-radius: 20px; color: teal;"><i
+                            class="bi bi-hand-thumbs-up" style="font-size: 1.1rem;">&nbsp;Like</i></button>
+                    <button type="button" class="btn"
+                        style="background-color: whitesmoke; border-radius: 20px; color: teal;"><i
+                            class="bi bi-chat-left" style="font-size: 1.1rem;">&nbsp;Comment</i></button>
+                    <button type="button" class="btn"
+                        style="background-color: whitesmoke; border-radius: 20px; color: teal;"><i class="bi bi-share"
+                            style="font-size: 1.1rem;">&nbsp;Share</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="leaderboard"><app-leaderboard></app-leaderboard></div>
+    <div class="card team-members" style="width: 18rem; margin-left: 1.5rem; max-height: 450px;">
+        <div class="card-body">
+            <h5 class="card-title" style="color: teal; font-weight: bold;">Team Members</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">You have not recognized</h6>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item custom-list-item">
+                    <img src="/assets/profile_annie.png" alt="annie" class="profile-img">
+                    <span class="list-item-text">Annie</span>
+                </li>
+                <li class="list-group-item custom-list-item">
+                    <img src="/assets/profile_maple.png" alt="maple" class="profile-img">
+                    <span class="list-item-text">Maple</span>
+                </li>
+                <li class="list-group-item custom-list-item">
+                    <img src="/assets/profile_barko.png" alt="barko" class="profile-img">
+                    <span class="list-item-text">Barko</span>
+                </li>
+                <li class="list-group-item custom-list-item">
+                    <img src="/assets/profile_bear.png" alt="bear" class="profile-img">
+                    <span class="list-item-text">Bear</span>
+                </li>
+                <li class="list-group-item custom-list-item">
+                    <img src="/assets/profile_blue.png" alt="blue" class="profile-img">
+                    <span class="list-item-text">Blue</span>
+                </li>
+            </ul>
+        </div>
+        <div class="card" style="width: 18rem; margin-top: 3rem;">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-body-secondary">Manager tip</h6>
+              <p class="card-text">Organize meaningful team-building activities to make positive impacts on employee morale and connection!</p>
+              <a href="#" class="card-link">Learn more</a>
+            </div>
+          </div>
+    </div>
+</div>
