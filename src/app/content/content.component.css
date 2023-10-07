@@ -297,7 +297,7 @@ h3 {
 
 .testimonial {
     font-size: var(--fs-400);
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 0.5rem;
     box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(--clr-secondary-400) / 0.25);
 }
